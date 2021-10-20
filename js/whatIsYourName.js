@@ -1,3 +1,3 @@
-let yuorName = prompt('What is your name', 'Peter?');
+let yourName = prompt('What is your name', 'Peter?');
 
-alert(`Твоё имя ${yuorName}`);
+alert(`Your name is ${yourName}`);
