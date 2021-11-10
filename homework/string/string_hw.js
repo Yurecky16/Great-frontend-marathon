@@ -22,7 +22,7 @@ let str = prompt(`Строка для «вертикального» вывод�
 function showVerticalMessage(str) {
 	((str[0] == `м`) || (str[0] == `m`)) ?
 		str = str[0].toUpperCase() + str.slice(1, 10) : str;
-	for (let char of str) {
+	for (let char of str.slice(0, 10)) {
 		console.log(char);
 	}
 }
