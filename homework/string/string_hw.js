@@ -19,10 +19,10 @@ showVerticalMessage('марафон')
 
 let str = prompt(`Строка для «вертикального» вывода:`);
 
-function showVerticalMessage(str) {
+function showVerticalMessage(str, strLength = 10) {
 	((str[0] == `м`) || (str[0] == `m`)) ?
 		str = str[0].toUpperCase() + str.slice(1) : str;
-	for (let char of str.slice(0, 10)) {
+	for (let char of str.slice(0, strLength)) {
 		console.log(char);
 	}
 }
