@@ -126,12 +126,9 @@ function deleteTask() {
 }
 
 function showList() {
-	console.log(list);
+	if (list.length == 0) {
+		console.log('А задач-то нет!');
+	} else {
+		console.log(list);
+	}
 }
-
-// addTask();
-// deleteTask();
-// changeStatus();
-// changePriority();
-// showList();
-// console.log(idCount);
