@@ -153,6 +153,9 @@ The wanted outcome is that when all function in the array are executed, the numb
 
 Желаемый результат, - чтобы после выполнения всех функций число от 0  до  N  было возвращено.*/
 
+
+// Далее решение без замены var на let, но с использованием объявления переменной через let. Как по мне не совсем тру=)
+
 function buildFun(n) {
 
 	var res = []
@@ -166,5 +169,18 @@ function buildFun(n) {
 	return res
 }
 
-let test = buildFun(10);
-console.log(test)
+
+// А тут решение без let вообще с применени IIFE - immediately-invoked function expressions, что означает функцию, запускаемую сразу после объявления.
+
+function buildFun(n) {
+
+	var res = []
+
+	for (var i = 0; i < n; i++) {
+		(function () {
+			var j = i;
+			res.push(function () { return j; });
+		})();
+	};
+	return res
+}
